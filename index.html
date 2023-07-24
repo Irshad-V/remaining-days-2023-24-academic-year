@@ -6,23 +6,24 @@
     <!-- Add Bootstrap CSS link -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <div class="container mt-4 ">
-        <h1>This Academic year will End: </h1>
-        <div class="row mt-5">
-            <div class="col">
+        <h2>This Academic year will End: </h2>
+        <div class="col mt-5">
+            <div class="col ">
                 <p id="daysDisplay" class="lead">Days:</p>
             </div>
             <div class="col">
-                <p id="hoursDisplay" class="lead"> Hours:</p>
+                <p id="hoursDisplay" class=" lead"> Hours:</p>
             </div>
             <div class="col">
                 <p id="minutesDisplay" class="lead"> Minutes:</p>
             </div>
             <div class="col">
-                <p id="secondsDisplay" class="lead">Seconds:</p>
+                <p id="secondsDisplay" class=" lead">Seconds:</p>
             </div>
             <div class="col">
                 <p id="weeksDisplay" class="lead">Weeks:</p>
@@ -32,25 +33,27 @@
 
 
 
-
-    <div class="container">
+    <div class="container d-flex justify-content-center ">
         <blockquote class="quote-box">
             <p class="quotation-mark">
                 “
             </p>
-            <p class="quote-text">
+            <p class="quote-text" id="quote-text">
                 Don't believe anything that you read on the internet, it may be fake.
             </p>
             <hr>
             <div class="blog-post-actions">
-                <p class="blog-post-bottom pull-left">
+                <p class="blog-post-bottom pull-left" id="quote-author">
                     Abraham Lincoln
                 </p>
                 <p class="blog-post-bottom pull-right">
-                    <span class="badge quote-badge">743</span>  ❤
+                    <span class="badge quote-badge"></span>  ❤
+
                 </p>
             </div>
+
         </blockquote>
+    </div>
     </div>
 
 
@@ -58,13 +61,9 @@
 
 
 
-
-
-
-
-
-
-
+    <i class="fa fa-whatsapp mt-5" style="font-size:24px"> <a href="https://api.whatsapp.com/send?phone=+919526388849"
+            target="_blank" class="btn btn-success">created Irshad V Moothedam.Click here to contact me on WhatsApp</a>
+    </i>
 
 
 
@@ -106,6 +105,10 @@
         // Call updateTime function immediately to show the initial time
         updateTime();
     </script>
+
+
+
+    <script src="app.js"></script>
 </body>
 
 </html>

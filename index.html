@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Final year</title>
+    <title>Final year of wafy </title>
     <!-- Add Bootstrap CSS link -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="Style.css">
@@ -11,7 +11,7 @@
 
 <body>
     <div class="container mt-4 ">
-        <h2>This Academic year will End: </h2>
+        <h2>Count down begins here!: </h2>
         <div class="col mt-5">
             <div class="col ">
                 <p id="daysDisplay" class="lead">Days:</p>
@@ -27,6 +27,9 @@
             </div>
             <div class="col">
                 <p id="weeksDisplay" class="lead">Weeks:</p>
+            </div>
+            <div class="col">
+                <p id="monthsDisplay" class="lead">Months: </p>
             </div>
         </div>
     </div>
@@ -69,7 +72,6 @@
 
 
 
-
     <!-- Add Bootstrap JS and jQuery scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
@@ -78,7 +80,7 @@
 
     <script>
         function updateTime() {
-            const destinationDate = new Date("May 23 2024 11:11:00");
+            const destinationDate = new Date("May 23, 2024 17:00:00");
             const currentDate = new Date();
 
             // Calculate the difference in milliseconds
@@ -90,6 +92,9 @@
             const diffInDays = Math.floor(diffInHours / 24);
             // Calculate the difference in weeks
             const diffInWeeks = Math.floor(diffInDays / 7);
+            const monthDifference =
+                (destinationDate.getFullYear() - currentDate.getFullYear()) * 12 +
+                (destinationDate.getMonth() - currentDate.getMonth());
 
             // Update the content of HTML elements with the calculated differences
             document.getElementById("daysDisplay").textContent = `Days: ${diffInDays}`;
@@ -97,6 +102,7 @@
             document.getElementById("minutesDisplay").textContent = `Minutes: ${diffInMinutes}`;
             document.getElementById("secondsDisplay").textContent = `Seconds: ${diffInSeconds}`;
             document.getElementById("weeksDisplay").textContent = ` Weeks: ${diffInWeeks}`;
+            document.getElementById("monthsDisplay").textContent = `Months: ${monthDifference}`;
         }
 
         // Update the time every second (1000ms)

@@ -339,7 +339,7 @@ function updateQuoteEvery24Hours() {
 
     setInterval(() => {
         displayQuote(); // Display a new random quote every 24 hours
-    }, 20 * 1000); //
+    }, 2 * 1000); //
 }
 //   24 * 60 * 60
 updateQuoteEvery24Hours();
